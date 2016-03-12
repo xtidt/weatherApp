@@ -6,8 +6,8 @@ $headers = array(
 );
 if(isset( $_GET['city'] )) {
     $getData = $_GET['city'];
-    $arr = json_encode(array('org_id' => $getData));
-    print_r($arr);
+    //ÇëÇóÊı¾İ
+    $arr = json_encode(array('city' => $getData));
     $url = 'http://apis.baidu.com/heweather/weather/free?city='.$getData;
     $curl = new Curl();
     $output = $curl->get($url, '', $headers);
