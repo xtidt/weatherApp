@@ -12,7 +12,7 @@ if(isset( $_GET['city'] )) {
     $output = $curl->get($url, '', $headers);
     print_r($output);
 }else{
-    print_r('无效参数');
+    print_r('无效参数123');
 }
 
 ?>
