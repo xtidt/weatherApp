@@ -6,14 +6,13 @@ $headers = array(
 );
 if(isset( $_GET['city'] )) {
     $getData = $_GET['city'];
-    //请求数据
     $arr = json_encode(array('city' => $getData));
     $url = 'http://apis.baidu.com/heweather/weather/free?city='.$getData;
     $curl = new Curl();
     $output = $curl->get($url, '', $headers);
     print_r($output);
 }else{
-    print_r('请求参数出错');
+    print_r('鏃犳晥鍙傛暟');
 }
 
 ?>
