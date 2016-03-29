@@ -1,0 +1,1 @@
+define("global",["zepto","msui","msuiExtend"],function(){function n(n){var e=new RegExp("(^|&)"+n+"=([^&]*)(&|$)","i"),t=window.location.search.substr(1).match(e);return null!=t?t[2]:null}$.GetQueryString=n});
