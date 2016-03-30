@@ -2,18 +2,17 @@
 include('curl_class.php');
 header("Content-Type: text/html; charset=UTF-8");
 $headers = array(
-    'apikey: 6e1f208007190302d70b40657dfe25d9'
+    'apikey: XXXXX'
 );
 if(isset( $_GET['city'] )) {
     $getData = $_GET['city'];
-    //请求数据
     $arr = json_encode(array('city' => $getData));
     $url = 'http://apis.baidu.com/heweather/weather/free?city='.$getData;
     $curl = new Curl();
     $output = $curl->get($url, '', $headers);
     print_r($output);
 }else{
-    print_r('请求参数出错');
+    print_r('error city code');
 }
 
 ?>
